@@ -13,6 +13,8 @@
 		84342ACE2762881300C2F3A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84342ACC2762881300C2F3A8 /* Main.storyboard */; };
 		84342AD02762881400C2F3A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84342ACF2762881400C2F3A8 /* Assets.xcassets */; };
 		84342AD32762881400C2F3A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84342AD12762881400C2F3A8 /* LaunchScreen.storyboard */; };
+		84342B1F2763F11C00C2F3A8 /* BeastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342B1E2763F11C00C2F3A8 /* BeastTableViewCell.swift */; };
+		84342B212763F18900C2F3A8 /* BeastCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342B202763F18900C2F3A8 /* BeastCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		84342ACF2762881400C2F3A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84342AD22762881400C2F3A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84342AD42762881400C2F3A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84342B1E2763F11C00C2F3A8 /* BeastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastTableViewCell.swift; sourceTree = "<group>"; };
+		84342B202763F18900C2F3A8 /* BeastCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				84342AC62762881300C2F3A8 /* AppDelegate.swift */,
 				84342AC82762881300C2F3A8 /* SceneDelegate.swift */,
+				84342B1E2763F11C00C2F3A8 /* BeastTableViewCell.swift */,
+				84342B202763F18900C2F3A8 /* BeastCellDelegate.swift */,
 				84342ACA2762881300C2F3A8 /* ViewController.swift */,
 				84342ACC2762881300C2F3A8 /* Main.storyboard */,
 				84342ACF2762881400C2F3A8 /* Assets.xcassets */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84342ACB2762881300C2F3A8 /* ViewController.swift in Sources */,
+				84342B212763F18900C2F3A8 /* BeastCellDelegate.swift in Sources */,
+				84342B1F2763F11C00C2F3A8 /* BeastTableViewCell.swift in Sources */,
 				84342AC72762881300C2F3A8 /* AppDelegate.swift in Sources */,
 				84342AC92762881300C2F3A8 /* SceneDelegate.swift in Sources */,
 			);

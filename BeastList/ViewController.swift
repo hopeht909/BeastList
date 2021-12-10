@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BeastCellDelegate {
     
-    var tasks = ["Exercise for 30 minutes", "Wireframe for some project", "Do laundry"]
+    var tasks = ["something", "something else", "final something"]
     
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var taskDescriptionLabel: UILabel!
     
     
     @IBAction func beastButtonPressed(_ sender: UIButton) {
@@ -26,7 +27,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 60
     }
+    func showTaskDescription(description: String) {
+            taskDescriptionLabel.text = description
+        }
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
      
@@ -35,10 +40,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BeastCell", for: indexPath)  as! BeastTableViewCell
 
         cell.textLabel?.text = tasks[indexPath.row]
-            
+        cell.delegate = self
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
