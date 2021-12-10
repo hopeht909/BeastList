@@ -25,10 +25,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
-extension ViewController: UITableViewDataSource {
-    
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
@@ -40,5 +41,17 @@ extension ViewController: UITableViewDataSource {
             
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Section: \(indexPath.section) and Row: \(indexPath.row)")
+            tasks.remove(at: indexPath.row)
+            tableView.reloadData()
+    }
 }
+
+
+
+
+
+
+
 
