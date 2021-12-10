@@ -8,12 +8,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var tasks = ["Exercise for 30 minutes", "Wireframe for some project", "Do laundry"]
+    
+    @IBOutlet weak var taskTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBAction func beastButtonPressed(_ sender: UIButton) {
+        if let task = taskTextField.text{
+            tasks.append(task)
+        }
+        tableView.reloadData()
+        taskTextField.text = ""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
     }
+}
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
 
-
+        cell.textLabel?.text = tasks[indexPath.row]
+            
+        return cell
+    }
 }
 
